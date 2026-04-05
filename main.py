@@ -1,18 +1,9 @@
-from selenium import webdriver
-
-def print_hi(name):
-    # 스크립트를 디버그하려면 하단 코드 줄의 중단점을 사용합니다.
-    print(f'Hi, {name}')  # 중단점을 전환하려면 Ctrl+F8을(를) 누릅니다.
-
-
+from utils.chrome_driver import create_driver
 
 if __name__ == '__main__':
 
-    driver = webdriver.Chrome()
+    ai_driver = create_driver(headless=False) # 크롬 드라이버 생성
+    ai_driver.get("https://www.aipartner.com") # 이실장 사이트 열기
 
-    print(driver.capabilities['browserVersion'])
-    print(driver.capabilities['chrome']['chromedriverVersion'])
+    ai_driver.quit()
 
-    driver.quit()
-
-# https://www.jetbrains.com/help/pycharm/에서 PyCharm 도움말 참조
