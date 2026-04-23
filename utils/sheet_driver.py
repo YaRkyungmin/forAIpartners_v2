@@ -80,7 +80,7 @@ def update_last_ad_cost_summary():
     spreadsheet_id = os.getenv('SHEET_ID')
 
     today_str = datetime.today().strftime("%Y-%m-%d")
-    ad_cost = 1450
+    ad_cost = 1580
     ad_count = 1
 
     values = get_ad_regist_cost_summary_from_google_sheet()
